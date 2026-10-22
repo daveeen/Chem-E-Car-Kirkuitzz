@@ -22,7 +22,7 @@ The model is built in stages. Stage 1 covers the light input through the compara
 1. Open `StopTrigger_Bench.slx` and select **Run**. The simulation takes a few seconds.
 2. Open either sensor's scope to view the sensor voltage (`Vs`), amplifier output (`Va`), and `STOP` signal.
 3. After the run, the MATLAB workspace contains `Tsig` (the light signal) and `LDR` and `PT` (the sensor results). Each sensor result contains `Vs`, `Va`, and `STOP` time series. For example, `LDR.Vs.Data` contains voltage samples and `LDR.Vs.Time` contains their times.
-4. To create a spreadsheet, run `StopTrigger_export` in the MATLAB command window from `C:\Users\davin\Documents`. The script runs the bench and creates `StopTrigger_results.csv` with columns `time_s, T, LDR_Vs, LDR_Va, LDR_STOP, PT_Vs, PT_Va, PT_STOP`.
+4. To create a spreadsheet, run `StopTrigger_export` in the MATLAB command window. The script runs the bench and creates `StopTrigger_results.csv` with columns `time_s, T, LDR_Vs, LDR_Va, LDR_STOP, PT_Vs, PT_Va, PT_STOP`.
 
 To change the light fade, resistor values, or gains, edit the variables in the model workspace (**Model Explorer** > **Model Workspace**). The phototransistor circuit starts from zero initial conditions and takes about 1 ms to settle, so ignore its first few samples.
 
