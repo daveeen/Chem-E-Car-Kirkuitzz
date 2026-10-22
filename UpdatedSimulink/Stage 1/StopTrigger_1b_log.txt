@@ -1,0 +1,16 @@
+tmr = timer("ExecutionMode","singleShot","StartDelay",1,"TimerFcn",@(~,~) runMC(png));
+start(tmr);
+function runMC(png)
+Error while evaluating TimerFcn for timer 'timer-1'
+
+Undefined function 'runMC' for input arguments of type 'string'.
+feature('HotLinks',0);cd("C:\Users\davin\Documents");
+png = "D:\OneDrive - The University of Sydney (Students)\Obsidian Vaults\IMGs\stoptrigger_1b_spread.png";
+cmd = "try, diary('C:\Users\davin\Documents\StopTrigger_1b_log.txt'); R1b = StopTrigger_1b_mc(100,0.01,'" + png + "'); diary off; mc1b_done=true; catch ME, mc1b_err=ME.message; end";
+tmr = timer("ExecutionMode","singleShot","StartDelay",1,"TimerFcn",@(~,~) evalin("base",cmd));
+start(tmr); disp("started");
+
+ N=100, light noise sigma=0.010 of T
+sensor              mean     std     min     max nofire  chatter  early
+LDR                0.466   0.127   0.244   0.801      0        0      1
+Phototransistor    0.503   0.113   0.281   1.000      0        6      2
